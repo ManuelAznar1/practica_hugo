@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ partial "menu.html" . }}
+{{ partial "header.html" . }}
+
+<body>
+<h1>Listado de Canales</h1>
+<ul>
+    {{ range .Site.Data.tv.tv }} <!-- Accede al array "tv" dentro del JSON -->
+    <table>
+        <caption><h1>{{ .name }}</h1></caption>
+        <tr>
+            {{ $cont := 0 }} <!-- Inicializa el contador -->
+            {{ range .channels }}
+            <td>
+                <a href="{{ .web }}">
+                    <img src="{{ .logo }}" alt="{{ .name }}" />
+                </a>
+                <p>{{ .name }}</p>
+            </td>
+            {{ $cont = add $cont 1 }} <!-- Incrementa el contador -->
+            {{ if eq (mod $cont 4) 0 }}
+        </tr>
+        <tr> <!-- Cierra y abre una nueva fila cada 4 elementos -->
+            {{ end }}
+            {{ end }}
+        </tr>
+    </table>
+    {{ end }}
+</ul>
+</body>
+{{ end }}

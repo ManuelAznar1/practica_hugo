@@ -1,0 +1,106 @@
+<!-- Incluir Font Awesome para los iconos de las flechas -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Incluir Swiper.js para el carrusel -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Carrusel -->
+<div class="swiper-container">
+    <!-- Contenedor de las diapositivas -->
+    <div class="swiper-wrapper">
+        {{ with .Inner }}
+        {{ . | safeHTML }}
+        {{ end }}
+    </div>
+
+    <!-- Botones de navegación, colocados dentro del contenedor pero fuera de las imágenes -->
+    <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+</div>
+
+<!-- Estilos básicos para el carrusel -->
+<style>
+    .swiper-container {
+        width: 80%;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Estilo para los botones de navegación */
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        color: #fff; /* Color blanco */
+        font-size: 20px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        cursor: pointer; /* Asegura que los botones sean clickeables */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Ubicar el botón de la izquierda (prev) a la izquierda de la imagen */
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    /* Ubicar el botón de la derecha (next) a la derecha de la imagen */
+    .swiper-button-next {
+        right: 10px;
+    }
+</style>
+
+<!-- Inicialización de Swiper.js -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Swiper.js cargado correctamente.");
+
+        // Inicializamos Swiper después de que el DOM esté completamente cargado
+        new Swiper('.swiper-container', {
+            loop: true, // Activar loop infinito
+            navigation: {
+                nextEl: '.swiper-button-next',  // Correcto identificador para la flecha derecha
+                prevEl: '.swiper-button-prev',  // Correcto identificador para la flecha izquierda
+            },
+            spaceBetween: 10, // Espacio entre las imágenes
+        });
+    });
+</script>
+
+
+<!-- Mover la inicialización de Swiper aquí, después de la carga del DOM -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Swiper.js cargado correctamente.");
+
+        var swiper = new Swiper('.swiper-container', {
+            loop: true, // Activar loop infinito
+            navigation: {
+                nextEl: '.swiper-button-next',  // Correcto identificador para la flecha derecha
+                prevEl: '.swiper-button-prev',  // Correcto identificador para la flecha izquierda
+            },
+            spaceBetween: 10, // Espacio entre las imágenes
+            slidesPerView: 1, // Número de imágenes visibles a la vez
+        });
+
+        // Comprobar si los botones están siendo reconocidos
+        console.log("Botones de navegación:", swiper.navigation);
+    });
+</script>
