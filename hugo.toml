@@ -8,7 +8,7 @@ name = "Home"
 url = "/"
 weight = 1
 identifier = "home"
-icon = "/images/home.svg"  # Ruta relativa a la carpeta 'static/images'
+icon = "/icons/home.svg"  # Ruta a la carpeta 'static/icons'
 newTab = true
 
 [[menu.main]]
@@ -16,7 +16,7 @@ name = "Contenidos"
 url = "/page/contenidos/"
 weight = 2
 identifier = "contenidos"
-icon = "/images/user.svg"  # Ruta relativa a la carpeta 'static/images'
+icon = "/icons/user.svg"  # Ruta a la carpeta 'static/icons'
 newTab = true
 
 [[menu.main]]
@@ -24,7 +24,7 @@ name = "Carrusel"
 url = "/page/imagenes/"
 weight = 3
 identifier = "carrusel"
-icon = "/images/link.svg"  # Ruta relativa a la carpeta 'static/images'
+icon = "/icons/link.svg"  # Ruta a la carpeta 'static/icons'
 newTab = true
 
 [[menu.main]]
@@ -32,7 +32,7 @@ name = "Markdown"
 url = "/page/markdown/"
 weight = 4
 identifier = "markdown"
-icon = "/images/hash.svg"  # Ruta relativa a la carpeta 'static/images'
+icon = "/icons/hash.svg"  # Ruta a la carpeta 'static/icons'
 newTab = true
 
 [[menu.main]]
@@ -40,5 +40,5 @@ name = "TV"
 url = "/page/tv/"
 weight = 5
 identifier = "tv"
-icon = "/images/tag.svg"  # Ruta relativa a la carpeta 'static/images'
+icon = "/icons/tag.svg"  # Ruta a la carpeta 'static/icons'
 newTab = true
