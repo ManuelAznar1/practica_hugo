@@ -1,31 +1,39 @@
 {{ define "main" }}
-{{ partial "menu.html" . }}
-{{ partial "header.html" . }}
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+
 
 <body>
 <h1>Listado de Canales</h1>
 <ul>
-    {{ range .Site.Data.tv.tv }} <!-- Accede al array "tv" dentro del JSON -->
+    {{ range .Site.Data.tv }}
     <table>
         <caption><h1>{{ .name }}</h1></caption>
+
         <tr>
-            {{ $cont := 0 }} <!-- Inicializa el contador -->
+            {{$cont := 1}} <!-- Se inicializa el contador -->
             {{ range .channels }}
             <td>
                 <a href="{{ .web }}">
                     <img src="{{ .logo }}" alt="{{ .name }}" />
                 </a>
-                <p>{{ .name }}</p>
             </td>
-            {{ $cont = add $cont 1 }} <!-- Incrementa el contador -->
+            {{ $cont = add $cont 1 }} <!-- Incremento del contador -->
+
             {{ if eq (mod $cont 4) 0 }}
-        </tr>
-        <tr> <!-- Cierra y abre una nueva fila cada 4 elementos -->
-            {{ end }}
-            {{ end }}
-        </tr>
+        </tr><tr> <!-- Se cierra la fila y se abre una nueva cada 4 elementos -->
+        {{ end }} <!-- Fin del if -->
+        {{ end }} <!-- Fin del segundo range (lista de canales) -->
+    </tr> <!-- Cierra la última fila -->
     </table>
-    {{ end }}
+    {{ end }} <!-- Fin del primer range (lista de TV) -->
 </ul>
 </body>
+
+
+{{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+{{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
 {{ end }}

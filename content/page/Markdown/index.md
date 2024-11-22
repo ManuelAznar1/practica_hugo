@@ -38,7 +38,7 @@ Usa \`#\` para crear encabezados:
 - Elemento C
 
 ### **Enlaces a paginas web** 🌐
-[Visita Google](https://www.google.com)  
+[Visita Google](https://www.google.com)
 
 ### **Icono en la pagina web** 🖼️
 ![Logo de Markdown](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
