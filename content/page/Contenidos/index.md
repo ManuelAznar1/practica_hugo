@@ -172,4 +172,32 @@ echo "Conexión exitosa.";
 
 ## 7. Buenas Prácticas en PHP ✅
 
+#### Uso de comentarios:
+
+```php
+    Comentario de una línea: // Esto es un comentario.
+    Comentario de múltiples líneas:
+
+    /*
+    Este es un comentario
+    de varias líneas.
+    */
+```
+
+#### Validar entradas del usuario:
+
+```php
+<?php
+$usuario = htmlspecialchars($_POST['usuario']);
+?>
+```
+
 ## 8. Recursos para Aprender PHP 📚
+
+Aquí tienes algunos recursos importantes sobre PHP:
+
+- [PHP.net](https://www.php.net/): Sitio oficial de PHP con documentación y tutoriales.
+- [W3Schools PHP](https://www.w3schools.com/php/): Tutoriales interactivos para aprender PHP.
+- [Tutorial de PHP en GeeksforGeeks](https://www.geeksforgeeks.org/php/): Guía completa con ejemplos y buenas prácticas.
+- [Stack Overflow PHP Questions](https://stackoverflow.com/questions/tagged/php): Preguntas frecuentes y soluciones de la comunidad.
+- [PHP: The Right Way](https://phptherightway.com/): Guía recomendada para seguir buenas prácticas en PHP.
