@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1 style="text-align: center; font-size: 32px; color: #222; margin-top: 20px;"></h1>
+<h1 style="text-align: center; font-size: 32px; color: #222; margin-top: 20px;">Contenido Principal</h1>
 
 <!-- Filtrar las páginas visibles -->
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
@@ -8,17 +8,22 @@
 {{ $pag := .Paginate ($filtered) }}
 
 <!-- Contenedor para el contenido principal -->
-<section class="article-list">
-    <article style="background-color: #fff; padding: 20px; margin: 20px auto; border: 1px solid #ddd; border-radius: 8px; max-width: 800px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<section class="article-list" style="position: relative;">
+    <article style="background-color: #fff; padding: 40px; margin: 40px auto; border: 1px solid #ddd; border-radius: 8px; max-width: 1000px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); position: relative;">
         <header>
-            <h2 style="font-size: 24px; color: #333; margin-bottom: 10px;">Contenido Principal</h2>
+            <h2 style="font-size: 28px; color: #333; margin-bottom: 15px;"></h2>
         </header>
+
+        <!-- Imagen dentro del artículo, posicionada en la parte superior derecha -->
+        <img src="{{ .Params.image }}" alt="Imagen" style="position: absolute; top: 20px; right: 20px; width: 200px; height: auto; border-radius: 8px;">
+
         <!-- Aquí se inserta el contenido de la página -->
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
+        <div style="font-size: 18px; color: #666; margin-bottom: 20px;">
             {{ .Content }}
         </div>
+
         <footer style="font-size: 14px; color: #999; display: flex; gap: 5px; align-items: center;">
-            <time datetime="{{ now.Format "2006-01-02" }}">{{ now.Format "Jan 2, 2006" }}</time>
+            <time datetime="{{ now.Format "2024-11-23" }}">{{ now.Format "Nov 23, 2024" }}</time>
             <span>·</span>
             <span>Generado dinámicamente</span>
         </footer>
