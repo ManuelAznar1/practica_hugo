@@ -32,3 +32,38 @@ El código básico en PHP se escribe dentro de etiquetas `<?php ... ?>`.
 echo "¡Hola, mundo!";
 // Esto mostrará "¡Hola, mundo!" en el navegador
 ```
+## 2. Sintaxis Básica 📝
+
+### **Variables**
+
+```php
+<?php
+$nombre = "Juan";
+$edad = 30;
+echo "Me llamo $nombre y tengo $edad años.";
+?>
+```
+
+### **Tipos de Datos**
+
+String: Cadenas de texto.<br>
+
+Int: Números enteros.
+
+Float: Números decimales.
+
+Bool: Booleanos (true/false).
+
+Array: Listas de elementos.
+
+Object: Objetos.
+
+```php
+<?php
+$cadena = "Texto";
+$numero = 42;
+$decimal = 3.14;
+$booleano = true;
+$array = [1, 2, 3, 4];
+?>
+```
