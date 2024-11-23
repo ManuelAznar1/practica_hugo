@@ -245,7 +245,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Me llamo </span><span style="color:#e6db74">$nombre</span><span style="color:#e6db74"> y tengo </span><span style="color:#e6db74">$edad</span><span style="color:#e6db74"> años.&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><h3 id="tipos-de-datos"><strong>Tipos de Datos</strong>
-</h3><p>String: Cadenas de texto.<!-- raw HTML omitted --></p>
+</h3><p>String: Cadenas de texto.</p>
 <p>Int: Números enteros.</p>
 <p>Float: Números decimales.</p>
 <p>Bool: Booleanos (true/false).</p>
@@ -272,14 +272,14 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><h3 id="bucles"><strong>Bucles</strong>
 </h3><p>Los bucles permiten ejecutar un bloque de código varias veces.</p>
-<p>Bucle for</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<h4 id="bucle-for">Bucle for
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; $i<span style="color:#f92672">++</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;El número es: </span><span style="color:#e6db74">$i</span><span style="color:#e6db74"> &lt;br&gt;&#34;</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>Bucle while</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span></span></code></pre></div><h4 id="bucle-while">Bucle while
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>$i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> ($i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;El número es: </span><span style="color:#e6db74">$i</span><span style="color:#e6db74"> &lt;br&gt;&#34;</span>;
@@ -296,8 +296,36 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">saludo</span>(<span style="color:#e6db74">&#34;Ana&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><h2 id="5-manejo-de-formularios-">5. Manejo de Formularios ✉️
-</h2><h2 id="6-conexión-a-bases-de-datos-">6. Conexión a Bases de Datos 📊
-</h2><h2 id="7-buenas-prácticas-en-php-">7. Buenas Prácticas en PHP ✅
+</h2><p>PHP puede procesar datos enviados desde formularios HTML.</p>
+<h4 id="formulario-html">Formulario HTML
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;procesar.php&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nombre&#34;</span>&gt;Nombre:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nombre&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nombre&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;Enviar&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span></code></pre></div><h4 id="procesamiento-en-php">Procesamiento en PHP
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>$nombre <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;nombre&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Hola, </span><span style="color:#e6db74">$nombre</span><span style="color:#e6db74">!&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="6-conexión-a-bases-de-datos-">6. Conexión a Bases de Datos 📊
+</h2><p>PHP se integra fácilmente con bases de datos como MySQL.</p>
+<p>Ejemplo de conexión a MySQL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>$host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+</span></span><span style="display:flex;"><span>$usuario <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span>$contraseña <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>$base_datos <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mi_base&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$conn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">mysqli</span>($host, $usuario, $contraseña, $base_datos);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">connect_error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#34;Conexión fallida: &#34;</span> <span style="color:#f92672">.</span> $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">connect_error</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Conexión exitosa.&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="7-buenas-prácticas-en-php-">7. Buenas Prácticas en PHP ✅
 </h2><h2 id="8-recursos-para-aprender-php-">8. Recursos para Aprender PHP 📚
 </h2>
 </section>

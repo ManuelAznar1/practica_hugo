@@ -46,7 +46,7 @@ echo "Me llamo $nombre y tengo $edad años.";
 
 ### **Tipos de Datos**
 
-String: Cadenas de texto.<br>
+String: Cadenas de texto.
 
 Int: Números enteros.
 
@@ -90,7 +90,7 @@ if ($edad >= 18) {
 
 Los bucles permiten ejecutar un bloque de código varias veces.
 
-Bucle for
+#### Bucle for
 ```php
 <?php
 for ($i = 0; $i < 5; $i++) {
@@ -99,7 +99,7 @@ for ($i = 0; $i < 5; $i++) {
 ?>
 ```
 
-Bucle while
+#### Bucle while
 ```php
 <?php
 $i = 0;
@@ -126,7 +126,49 @@ echo saludo("Ana");
 
 ## 5. Manejo de Formularios ✉️
 
+PHP puede procesar datos enviados desde formularios HTML.
+
+#### Formulario HTML
+
+```html
+<form action="procesar.php" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <button type="submit">Enviar</button>
+</form>
+```
+
+#### Procesamiento en PHP
+
+```php
+<?php
+$nombre = $_POST['nombre'];
+echo "Hola, $nombre!";
+?>
+```
+
 ## 6. Conexión a Bases de Datos 📊
+
+PHP se integra fácilmente con bases de datos como MySQL.
+
+Ejemplo de conexión a MySQL:
+
+```php
+<?php
+$host = "localhost";
+$usuario = "root";
+$contraseña = "";
+$base_datos = "mi_base";
+
+$conn = new mysqli($host, $usuario, $contraseña, $base_datos);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+echo "Conexión exitosa.";
+?>
+```
 
 ## 7. Buenas Prácticas en PHP ✅
 
