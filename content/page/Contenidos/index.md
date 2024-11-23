@@ -67,3 +67,67 @@ $booleano = true;
 $array = [1, 2, 3, 4];
 ?>
 ```
+
+## 3. Control de Flujo 🚦
+
+### **Condicionales**
+
+Se utiliza if, else y elseif para controlar el flujo del programa.
+
+```php
+<?php
+$edad = 20;
+
+if ($edad >= 18) {
+    echo "Eres mayor de edad.";
+} else {
+    echo "Eres menor de edad.";
+}
+?>
+```
+
+### **Bucles**
+
+Los bucles permiten ejecutar un bloque de código varias veces.
+
+Bucle for
+```php
+<?php
+for ($i = 0; $i < 5; $i++) {
+    echo "El número es: $i <br>";
+}
+?>
+```
+
+Bucle while
+```php
+<?php
+$i = 0;
+while ($i < 5) {
+    echo "El número es: $i <br>";
+    $i++;
+}
+?>
+```
+
+## 4. Funciones en PHP 🔧
+
+Las funciones encapsulan bloques de código para ser reutilizados.
+
+```php
+<?php
+function saludo($nombre) {
+    return "Hola, $nombre!";
+}
+
+echo saludo("Ana");
+?>
+```
+
+## 5. Manejo de Formularios ✉️
+
+## 6. Conexión a Bases de Datos 📊
+
+## 7. Buenas Prácticas en PHP ✅
+
+## 8. Recursos para Aprender PHP 📚
