@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://ManuelAznar1.github.io/practica_hugo/'
 languageCode = 'en-us'
 title = 'Practica de Hugo'
 theme = "stack"
