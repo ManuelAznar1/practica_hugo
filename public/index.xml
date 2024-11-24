@@ -6,6 +6,6 @@
         <description>Recent content in Home on Practica de Hugo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate></lastBuildDate><atom:link href="./index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate></lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
