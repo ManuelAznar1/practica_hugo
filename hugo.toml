@@ -1,5 +1,5 @@
-#baseURL = 'https://ManuelAznar1.github.io/practica_hugo/'
-relativeURLs = true
+baseURL = 'https://ManuelAznar1.github.io/practica_hugo/'
+#relativeURLs = true
 languageCode = 'en-us'
 title = 'Practica de Hugo'
 theme = "stack"
